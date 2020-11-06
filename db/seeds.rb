@@ -5,3 +5,13 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+Commerce.destroy_all
+
+10.times do
+  commerce = Commerce.new(
+    name: "Margot & Cie",
+    description: "Situé à Palais, je vends toutes sortes d'objets de décoration. Idéal pour faire vos cadeaux de Noël !!!",
+    tag: "décoration"
+  )
+  commerce.save
+end
